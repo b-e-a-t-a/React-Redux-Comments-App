@@ -5,13 +5,12 @@ import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 import {Provider} from 'react-redux';
 
-import {createStore, applyMiddleware} from 'redux';
-import {createLogger} from 'redux-logger';
+import {createStore} from 'redux';
 import reducer from './reducer.js';
 import {addComment} from './actions.js';
+import DevTools from './DevTools';
 
-const logger = createLogger();
-const store = createStore(reducer, applyMiddleware(logger));
+const store = createStore(reducer, DevTools.instrument());
 
 
 ReactDOM.render(
