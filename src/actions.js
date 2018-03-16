@@ -13,30 +13,28 @@ export function addComment(text) {
 		id: uuid.v4()
 	}
 }
-/*
-function editComment(text, id) {
+export function editComment(text, commentId) {
 	return {
 		type: EDIT_COMMENT,
 		text,
-		id
+		id: commentId
 	}
 }
-function removeComment(id) {
+export function removeComment(commentId) {
 	return {
 		type: REMOVE_COMMENT,
-		id
+		id: commentId
 	}
 }
-function thumbUpComment(id) {
+export function thumbUpComment(commentId) {
 	return {
 		type: THUMB_UP_COMMENT,
-		id
+		id: commentId
 	}
 }
-function thumbDownComment(id) {
+export function thumbDownComment(commentId) {
 	return {
 		type: THUMB_DOWN_COMMENT,
-		id
+		id: commentId
 	}
 }
-*/
